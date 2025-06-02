@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Portfolio Salma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+  <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Salma Portfolio</a>
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="index.html" target="_blank" class="hover:text-indigo-600">Home</a></li>
+        <li><a href="about.html" target="_blank" class="hover:text-indigo-600">About</a></li>
+        <li><a href="eksperience.html" target="_blank" class="hover:text-indigo-600">Experience</a></li>
+        <li><a href="skill.html" target="_blank" class="hover:text-indigo-600">Skill</a></li>
+        <li><a href="sertifikat.html" target="_blank" class="hover:text-indigo-600">Certificate</a></li>
+        <li><a href="pengembang.html" ctarget="_blank" lass="hover:text-indigo-600">Contact</a></li>
+      </ul>
+      <div class="flex items-center space-x-4">
+        <button id="themeToggle" class="text-xl">
+          🌙
+        </button>
+        <a href="https://www.instagram.com/auliaasalma._/" class="text-xl text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
+            📞
+        </a>
+        <button id="menuBtn" class="md:hidden">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="hidden md:hidden" id="mobileMenu">
+      <ul class="flex flex-col items-center space-y-4 py-4">
+        <li><a href="index.html" target="_blank" >Home</a></li>
+        <li><a href="about.html" target="_blank" >About</a></li>
+        <li><a href="eksperience.html" target="_blank" >Experience</a></li>
+        <li><a href="skill.html" target="_blank">Skills</a></li>
+        <li><a href="sertifikat.html" target="_blank">Certificates</a></li>
+        <li><a href="pengembang.html" target="_blank">Contact</a></li>
+      </ul>
+    </div>
+</header>
+
+  <main class="container mx-auto px-6 py-10">
+    <section class="flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-10" data-aos="fade-up">
+      <div class="text-center md:text-left md:w-1/2">
+        <h1 class="text-4xl font-bold text-indigo-600 dark:text-indigo-400">Hi, I'm Salma Aulia Rahma</h1>
+        <p class="mt-4 text-lg">I am a student at SMK Negeri 1 Nglegok majoring in Computer and Network Engineering.</p>
+        <a href="about.html" target="_blank" class="inline-block mt-6 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md">
+          Learn More
+        </a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="image/ft salma.jpg" class="rounded-full shadow-lg w-64 h-64 object-cover" alt="Profile Picture"/>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white dark:bg-gray-800 py-6 text-center text-sm text-gray-600 dark:text-gray-300">
+    © 2025 Salma Aulia Rahma. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Toggle mobile menu
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Dark mode toggle
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      toggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
